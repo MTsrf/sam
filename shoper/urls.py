@@ -24,3 +24,7 @@ urlpatterns = [
     path('accounts/',include('accounts.urls'))
 ]
 urlpatterns = urlpatterns + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)
+
+# After. change "document_root" from "MEDIA_URL" to "MEDIA_ROOT"
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
